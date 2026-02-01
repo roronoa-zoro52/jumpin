@@ -1,13 +1,35 @@
-# Jumpin
+# 🚀 SyncAI Protocol
 
-Jumpin is a collaborative project developed using Antigravity.
+**The Operating System for the Decentralized Workforce.**
+Built with Antigravity (Next.js + Expo + Tamagui + Supabase).
 
-## Team Consistency
+## 👥 The Team
+- **Architect:** [Your Name] (AI Logic & Core Arch)
+- **UI Lead:** [Dev 2 Name] (Tamagui & Design)
+- **Mobile Lead:** [Dev 3 Name] (Expo & Native Features)
+- **Integration:** [Dev 4 Name] (Supabase & API Connections)
 
-This project uses the `.agent/` directory to share instructions and workflows across the team. If you are using Antigravity, it will automatically follow the guidelines defined in `.agent/instructions.md`.
+## ⚡ Antigravity Setup (IMPORTANT)
+This project uses a strict `.agent` protocol to assist AI coding tools.
 
-## Getting Started
+1. **Context is King:**
+   - If your AI is hallucinating or using the wrong libraries (like `div` instead of `Stack`), tell it:
+   > "Read .agent/instructions.md and correct the code."
 
-1. Clone the repository.
-2. Ensure you have Antigravity enabled.
-3. Start developing! Antigravity will help keep the codebase consistent.
+2. **Workflows:**
+   - Look in `.agent/workflows/` for step-by-step guides on how to Start, Test, and Push code.
+
+## 🛠 Quick Start
+```bash
+# 1. Install
+yarn install
+
+# 2. Run Web
+yarn web
+
+# 3. Run Mobile
+yarn native
+```
+
+## 🔐 Secrets
+Do not commit `.env` files. Ask the Architect for the keys via secure channel.

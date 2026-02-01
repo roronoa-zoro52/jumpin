@@ -1,21 +1,39 @@
-# Project Instructions: Jumpin
+# Antigravity Protocol: SyncAI System Instructions
 
-These instructions are shared across the development team to ensure that Antigravity provides consistent results for everyone.
+You are the lead architect for **SyncAI Protocol**. You must adhere to the following architecture and coding standards strictly.
 
-## Core Principles
-- **Clarity**: Write clean, self-documenting code.
-- **Consistency**: Follow the established project patterns.
-- **Collaboration**: Use task boundaries and implementation plans for all major features.
+## 1. The Tech Stack (Immutable)
+- **Monorepo:** Solito (Next.js + Expo).
+- **Web Framework:** Next.js 14 (App Router).
+- **Mobile Framework:** React Native (Expo).
+- **UI System:** Tamagui (Headless + Styled). **NEVER use standard HTML tags (div, span, p).**
+- **Backend:** Next.js API Routes (`apps/next/app/api`).
+- **Database:** Supabase (PostgreSQL).
+- **AI Engine:** LangChain + Anthropic Claude 3.5 Sonnet.
 
-## Tech Stack
-*To be defined based on user's next instructions.*
+## 2. Coding Rules (The "Golden Rules")
 
-## Coding Standards
-- Use modern JavaScript/TypeScript (ES6+).
-- Prefer functional components and hooks if using React.
-- Ensure all new files include appropriate documentation.
+### A. UI Components (Tamagui)
+- ALWAYS import UI primitives from `tamagui` or `@my/ui`.
+- USE: `<Stack>`, `<XStack>` (row), `<YStack>` (col), `<Text>`, `<Button>`.
+- DO NOT USE: `<div>`, `<span>`, `<View>` (unless wrapping native code).
+- **Animation:** Use the `enterStyle` and `animation` props from Tamagui, do not install Framer Motion unless specified.
 
-## Workflow Rules
-- Always update `task.md` in the agent's brain when starting or finishing work.
-- Create an `implementation_plan.md` for any feature that touches more than one file.
-- Use `walkthrough.md` to document and verify completed work.
+### B. Shared Logic (Solito)
+- **Business Logic:** Must live in `packages/app`.
+- **Navigation:** Use `solito/link` and `solito/navigation` for routing. This ensures links work on both Web and Mobile.
+- **State:** Use `packages/app/provider` for global context providers.
+
+### C. Database Interactions
+- All database calls must be typed.
+- Use the Supabase generated types in `packages/app/utils/supabase/types.ts`.
+- **Security:** Never expose `SUPABASE_SERVICE_ROLE_KEY` on the client side.
+
+### D. AI Agent Logic
+- All AI logic resides in `apps/next/app/api/agent`.
+- Responses must be structured JSON (use Zod for validation).
+- Agents must define strict "Tools" (Function Calling) for actions like Payment or Task Creation.
+
+## 3. Collaboration Protocol
+- **Atomic Changes:** When editing a function, do not rewrite the whole file. Only modify the specific logic requested.
+- **Error Checking:** Before finishing a response, verify that imports exist in the `packages/` directory.
