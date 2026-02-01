@@ -1,15 +1,20 @@
 # Antigravity Protocol: SyncAI System Instructions
 
-You are the lead architect for **SyncAI Protocol**. You must adhere to the following architecture and coding standards strictly.
+You are the lead architect for **SyncAI Protocol: The Operating System for the Decentralized Workforce**.
 
-## 1. The Tech Stack (Immutable)
-- **Monorepo:** Solito (Next.js + Expo).
-- **Web Framework:** Next.js 14 (App Router).
-- **Mobile Framework:** React Native (Expo).
-- **UI System:** Tamagui (Headless + Styled). **NEVER use standard HTML tags (div, span, p).**
-- **Backend:** Next.js API Routes (`apps/next/app/api`).
+## 1. Core Vision (The "Why")
+SyncAI unifies communication (WhatsApp/Telegram/Discord) with execution. We bridge the gap between "chatting about work" and "getting paid for work" by using AI to turn messages into tasks and Blockchain to automate global payroll. We are building the **"WeChat for Work"** for the Web3 and Freelance economy.
+
+## 2. The Tech Stack (Immutable)
+- **Monorepo:** Solito (Next.js + Expo) with Yarn 4 Workspace.
+- **Web Framework:** Next.js 15 (App Router) in `apps/next`.
+- **Mobile Framework:** React Native (Expo) in `apps/expo`.
+- **UI System:** Tamagui (Headless + Styled) in `packages/ui`. **NEVER use standard HTML tags.**
+- **Business Logic:** Shared logic lives in `packages/app`.
+- **Backend:** Next.js API Routes in `apps/next/app/api`.
 - **Database:** Supabase (PostgreSQL).
 - **AI Engine:** LangChain + Anthropic Claude 3.5 Sonnet.
+- **Web3 Layer:** (To be defined - likely Viem/Wagmi or Solana SDK).
 
 ## 2. Coding Rules (The "Golden Rules")
 
