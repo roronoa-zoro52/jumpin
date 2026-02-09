@@ -16,8 +16,11 @@
     "@tamagui/shorthands": "^2.0.0-rc.0",
     "@tamagui/themes": "^2.0.0-rc.0",
     "burnt": "^0.12.2",
-    "expo-constants": "~17.1.6",
+    "expo-constants": "~18.0.13",
+    "expo-haptics": "^15.0.8",
     "expo-linking": "~7.1.4",
+    "expo-local-authentication": "^17.0.8",
+    "expo-notifications": "^0.32.16",
     "react-native-safe-area-context": "5.4.0",
     "solito": "patch:solito@npm%3A5.0.0#~/.yarn/patches/solito-npm-5.0.0-44b0b420f4.patch"
   },

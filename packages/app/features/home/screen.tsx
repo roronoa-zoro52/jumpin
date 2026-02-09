@@ -15,8 +15,10 @@ import {
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
 import { useState } from 'react'
 import { Platform } from 'react-native'
+import { useRouter } from 'solito/navigation'
 
 export function HomeScreen({ onLinkPress }: { onLinkPress?: () => void }) {
+  const router = useRouter()
 
   return (
     <YStack
@@ -60,6 +62,8 @@ export function HomeScreen({ onLinkPress }: { onLinkPress?: () => void }) {
       </YStack>
 
       <Button onPress={onLinkPress}>Link to user</Button>
+      <Button onPress={() => router.push('/agent')}>Go to Agent</Button>
+      <Button onPress={() => router.push('/auth/biometrics')}>Wallet Lock</Button>
 
       <SheetDemo />
     </YStack>

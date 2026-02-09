@@ -12,6 +12,10 @@ module.exports = {
     'expo-linking',
     'expo-constants',
     'expo-modules-core',
+    'app',
+    'expo-haptics',
+    'expo-local-authentication',
+    'expo-notifications',
   ],
   experimental: {
     scrollRestoration: true,
